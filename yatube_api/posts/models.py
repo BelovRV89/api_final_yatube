@@ -31,6 +31,7 @@ class Post(models.Model):
 class Follow(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='follower', null=True)
+
     following = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='following', null=True)
 
